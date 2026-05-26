@@ -16,8 +16,9 @@ from policy_ax.data_io import (
 class DataIOTests(unittest.TestCase):
     def test_project_root_points_to_lab(self):
         root = project_root()
-        self.assertEqual(root.name, "public-policy-ax-ontology-rag-lab")
-        self.assertTrue((root / "data").exists())
+        self.assertTrue((root / "README.md").exists())
+        self.assertTrue((root / "data/raw/public_policy_records.json").exists())
+        self.assertTrue((root / "policy_ax").exists())
 
     def test_load_json_rejects_non_array(self):
         with tempfile.TemporaryDirectory() as tmp:
