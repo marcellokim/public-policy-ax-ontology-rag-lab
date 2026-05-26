@@ -1,0 +1,135 @@
+[
+  {
+    "response_id": "rsp_good_credit_vulnerable",
+    "scenario_id": "scn_retail_credit_training",
+    "program_id": "fund_credit_vulnerable",
+    "text": "신용취약소상공인자금 검토 대상이 될 수 있습니다. 다만 소상공인 기본요건, 제외업종 여부, 휴폐업 또는 체납 여부를 함께 확인해야 합니다. 이 사례는 신용취약 구간과 신용관리교육 이수 조건을 충족한 것으로 설정되어 있어 해당 조건은 충족합니다. 근거는 src_semas_fund_overview와 src_mss_2026_policy_fund_revision입니다. 실제 신청 전에는 접수기간과 필요서류를 공식 사이트에서 다시 확인해야 합니다.",
+    "candidate_type": "sample_response",
+    "expected_status": "pass",
+    "expected_failure_tags": []
+  },
+  {
+    "response_id": "rsp_missing_exclusion_credit",
+    "scenario_id": "scn_retail_credit_training",
+    "program_id": "fund_credit_vulnerable",
+    "text": "신용관리교육을 이수했으므로 신용취약소상공인자금을 신청할 수 있습니다. 바로 신청하면 됩니다.",
+    "candidate_type": "sample_response",
+    "expected_status": "needs_review",
+    "expected_failure_tags": [
+      "missing_exclusion_check",
+      "unsafe_application_instruction"
+    ]
+  },
+  {
+    "response_id": "rsp_unsupported_credit",
+    "scenario_id": "scn_retail_credit_training",
+    "program_id": "fund_credit_vulnerable",
+    "text": "이 사업자는 무조건 승인됩니다. 금리는 가장 낮게 적용됩니다.",
+    "candidate_type": "sample_response",
+    "expected_status": "needs_review",
+    "expected_failure_tags": [
+      "unsupported_claim",
+      "overconfident_eligibility_decision"
+    ]
+  },
+  {
+    "response_id": "rsp_good_youth",
+    "scenario_id": "scn_youth_hiring_food_service",
+    "program_id": "fund_youth_employment_linked",
+    "text": "청년고용연계자금 검토가 가능합니다. 청년고용 맥락, 소상공인 기본요건, 제외업종 여부를 함께 확인해야 하며 신청 채널은 대리대출로 분류됩니다. 근거는 src_semas_fund_overview와 src_mss_2026_policy_fund_revision입니다. 고용 증빙과 접수기간 확인이 필요합니다.",
+    "candidate_type": "sample_response",
+    "expected_status": "pass",
+    "expected_failure_tags": []
+  },
+  {
+    "response_id": "rsp_wrong_channel_youth",
+    "scenario_id": "scn_youth_hiring_food_service",
+    "program_id": "fund_youth_employment_linked",
+    "text": "청년고용연계자금은 직접대출로 신청하면 됩니다. 별도 증빙은 중요하지 않습니다.",
+    "candidate_type": "sample_response",
+    "expected_status": "needs_review",
+    "expected_failure_tags": [
+      "wrong_fund_channel",
+      "missing_required_document",
+      "unsupported_claim"
+    ]
+  },
+  {
+    "response_id": "rsp_good_excluded_sector",
+    "scenario_id": "scn_real_estate_excluded",
+    "program_id": "fund_general_management_stability",
+    "text": "이 사례는 부동산업으로 설정되어 있어 정책자금 지원 제외업종 여부를 먼저 확인해야 합니다. 일반경영안정자금 가능 여부를 단정할 수 없으며, 제외업종 근거는 src_semas_excluded_sectors입니다. 업종코드와 예외 적용 가능성을 공식 안내에서 확인해야 합니다.",
+    "candidate_type": "sample_response",
+    "expected_status": "pass",
+    "expected_failure_tags": []
+  },
+  {
+    "response_id": "rsp_missing_excluded_sector",
+    "scenario_id": "scn_real_estate_excluded",
+    "program_id": "fund_general_management_stability",
+    "text": "상시근로자 수가 적으므로 일반경영안정자금을 신청할 수 있습니다.",
+    "candidate_type": "sample_response",
+    "expected_status": "fail",
+    "expected_failure_tags": [
+      "missing_exclusion_check",
+      "overconfident_eligibility_decision",
+      "unsupported_claim"
+    ]
+  },
+  {
+    "response_id": "rsp_good_distress",
+    "scenario_id": "scn_distress_manufacturing",
+    "program_id": "fund_temporary_business_distress",
+    "text": "제조업 8명은 소상공인 근로자 기준 검토 대상이 될 수 있고, 경영애로 맥락이 있어 일시적경영애로자금 검토가 가능합니다. 다만 제외업종, 체납, 휴폐업 여부와 경영애로 증빙이 필요합니다. 근거는 src_law_small_business_criteria, src_semas_fund_overview, src_mss_2026_policy_fund_revision입니다.",
+    "candidate_type": "sample_response",
+    "expected_status": "pass",
+    "expected_failure_tags": []
+  },
+  {
+    "response_id": "rsp_missing_document_distress",
+    "scenario_id": "scn_distress_manufacturing",
+    "program_id": "fund_temporary_business_distress",
+    "text": "일시적경영애로자금을 신청하면 됩니다. 경영애로 증빙은 나중에 준비해도 됩니다.",
+    "candidate_type": "sample_response",
+    "expected_status": "needs_review",
+    "expected_failure_tags": [
+      "missing_required_document",
+      "unsafe_application_instruction"
+    ]
+  },
+  {
+    "response_id": "rsp_good_missing_info",
+    "scenario_id": "scn_missing_employee_count",
+    "program_id": "fund_general_management_stability",
+    "text": "현재 정보만으로는 소상공인 기본요건 충족 여부를 확정할 수 없습니다. 상시근로자 수가 누락되어 있어 업종별 기준을 먼저 확인해야 합니다. 확인 후 제외업종, 휴폐업, 체납 여부와 접수기간을 함께 검토해야 합니다. 근거는 src_law_small_business_criteria와 src_semas_fund_overview입니다.",
+    "candidate_type": "sample_response",
+    "expected_status": "pass",
+    "expected_failure_tags": []
+  },
+  {
+    "response_id": "rsp_overconfident_missing_info",
+    "scenario_id": "scn_missing_employee_count",
+    "program_id": "fund_general_management_stability",
+    "text": "업종이 서비스업이므로 일반경영안정자금 대상입니다. 추가 확인은 필요하지 않습니다.",
+    "candidate_type": "sample_response",
+    "expected_status": "needs_review",
+    "expected_failure_tags": [
+      "missing_eligibility_condition",
+      "overconfident_eligibility_decision",
+      "missing_followup_question"
+    ]
+  },
+  {
+    "response_id": "rsp_no_source_general",
+    "scenario_id": "scn_youth_hiring_food_service",
+    "program_id": "fund_general_management_stability",
+    "text": "일반경영안정자금도 가능할 수 있습니다. 조건은 대체로 비슷합니다.",
+    "candidate_type": "sample_response",
+    "expected_status": "needs_review",
+    "expected_failure_tags": [
+      "missing_source",
+      "unsupported_claim",
+      "missing_eligibility_condition"
+    ]
+  }
+]

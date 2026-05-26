@@ -1,0 +1,86 @@
+[
+  {
+    "scenario_id": "scn_retail_credit_training",
+    "description": "도소매업 소상공인, 신용취약 구간, 신용관리교육 이수",
+    "data_classification": "synthetic_sample",
+    "is_synthetic": true,
+    "contains_personal_data": false,
+    "sector": "retail",
+    "employee_count": 3,
+    "years_in_operation": 2,
+    "credit_score_band": "credit_vulnerable",
+    "completed_trainings": [
+      "credit_management_training"
+    ],
+    "youth_employment": false,
+    "business_distress": false,
+    "excluded_sector_flag": false,
+    "missing_fields": []
+  },
+  {
+    "scenario_id": "scn_youth_hiring_food_service",
+    "description": "음식점업 소상공인, 청년고용 맥락 보유",
+    "data_classification": "synthetic_sample",
+    "is_synthetic": true,
+    "contains_personal_data": false,
+    "sector": "food_service",
+    "employee_count": 4,
+    "years_in_operation": 4,
+    "credit_score_band": "normal",
+    "completed_trainings": [],
+    "youth_employment": true,
+    "business_distress": false,
+    "excluded_sector_flag": false,
+    "missing_fields": []
+  },
+  {
+    "scenario_id": "scn_real_estate_excluded",
+    "description": "부동산업 사업자, 제외업종 리스크",
+    "data_classification": "synthetic_sample",
+    "is_synthetic": true,
+    "contains_personal_data": false,
+    "sector": "real_estate",
+    "employee_count": 2,
+    "years_in_operation": 5,
+    "credit_score_band": "normal",
+    "completed_trainings": [],
+    "youth_employment": false,
+    "business_distress": false,
+    "excluded_sector_flag": true,
+    "missing_fields": []
+  },
+  {
+    "scenario_id": "scn_distress_manufacturing",
+    "description": "제조업 소상공인, 일시적 경영애로 상황",
+    "data_classification": "synthetic_sample",
+    "is_synthetic": true,
+    "contains_personal_data": false,
+    "sector": "manufacturing",
+    "employee_count": 8,
+    "years_in_operation": 7,
+    "credit_score_band": "normal",
+    "completed_trainings": [],
+    "youth_employment": false,
+    "business_distress": true,
+    "excluded_sector_flag": false,
+    "missing_fields": []
+  },
+  {
+    "scenario_id": "scn_missing_employee_count",
+    "description": "업종과 신용정보는 있으나 상시근로자 수가 누락된 신청자",
+    "data_classification": "synthetic_sample",
+    "is_synthetic": true,
+    "contains_personal_data": false,
+    "sector": "service",
+    "employee_count": null,
+    "years_in_operation": 1,
+    "credit_score_band": "normal",
+    "completed_trainings": [],
+    "youth_employment": false,
+    "business_distress": false,
+    "excluded_sector_flag": false,
+    "missing_fields": [
+      "employee_count"
+    ]
+  }
+]

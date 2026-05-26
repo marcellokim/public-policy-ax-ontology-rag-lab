@@ -1,0 +1,328 @@
+[
+  {
+    "program_id": "fund_general_management_stability",
+    "name": "일반경영안정자금",
+    "channel": "proxy_loan",
+    "support_type": "working_capital",
+    "eligibility_conditions": [
+      "small_business_basic",
+      "normal_operation"
+    ],
+    "exclusion_conditions": [
+      "excluded_sector",
+      "closed_or_suspended",
+      "tax_delinquency"
+    ],
+    "exception_rules": [],
+    "required_documents": [
+      "business_registration",
+      "small_business_confirmation"
+    ],
+    "application_window": {
+      "type": "period_or_fund_exhaustion",
+      "source_id": "src_semas_fund_overview"
+    },
+    "loan_limit": {
+      "amount_label": "program_specific_limit",
+      "source_id": "src_semas_fund_overview"
+    },
+    "loan_term": {
+      "term_label": "program_specific_term",
+      "source_id": "src_semas_fund_overview"
+    },
+    "interest_rule": {
+      "rate_label": "policy_rate_or_variable",
+      "source_id": "src_semas_fund_overview"
+    },
+    "source_ids": [
+      "src_semas_fund_overview",
+      "src_mss_2026_policy_fund_revision"
+    ]
+  },
+  {
+    "program_id": "fund_credit_vulnerable",
+    "name": "신용취약소상공인자금",
+    "channel": "direct_loan",
+    "support_type": "working_capital",
+    "eligibility_conditions": [
+      "small_business_basic",
+      "credit_vulnerable_band",
+      "credit_management_training"
+    ],
+    "exclusion_conditions": [
+      "excluded_sector",
+      "closed_or_suspended",
+      "tax_delinquency"
+    ],
+    "exception_rules": [],
+    "required_documents": [
+      "business_registration",
+      "small_business_confirmation",
+      "credit_management_training_certificate"
+    ],
+    "application_window": {
+      "type": "announced_period",
+      "source_id": "src_mss_2026_policy_fund_revision"
+    },
+    "loan_limit": {
+      "amount_label": "program_specific_limit",
+      "source_id": "src_semas_fund_overview"
+    },
+    "loan_term": {
+      "term_label": "program_specific_term",
+      "source_id": "src_semas_fund_overview"
+    },
+    "interest_rule": {
+      "rate_label": "program_specific_rate",
+      "source_id": "src_semas_fund_overview"
+    },
+    "source_ids": [
+      "src_semas_fund_overview",
+      "src_mss_2026_policy_fund_revision"
+    ]
+  },
+  {
+    "program_id": "fund_youth_employment_linked",
+    "name": "청년고용연계자금",
+    "channel": "proxy_loan",
+    "support_type": "working_capital",
+    "eligibility_conditions": [
+      "small_business_basic",
+      "youth_employment_context"
+    ],
+    "exclusion_conditions": [
+      "excluded_sector",
+      "closed_or_suspended",
+      "tax_delinquency"
+    ],
+    "exception_rules": [],
+    "required_documents": [
+      "business_registration",
+      "small_business_confirmation",
+      "employment_evidence"
+    ],
+    "application_window": {
+      "type": "announced_period",
+      "source_id": "src_mss_2026_policy_fund_revision"
+    },
+    "loan_limit": {
+      "amount_label": "program_specific_limit",
+      "source_id": "src_semas_fund_overview"
+    },
+    "loan_term": {
+      "term_label": "program_specific_term",
+      "source_id": "src_semas_fund_overview"
+    },
+    "interest_rule": {
+      "rate_label": "program_specific_rate",
+      "source_id": "src_semas_fund_overview"
+    },
+    "source_ids": [
+      "src_semas_fund_overview",
+      "src_mss_2026_policy_fund_revision"
+    ]
+  },
+  {
+    "program_id": "fund_temporary_business_distress",
+    "name": "일시적경영애로자금",
+    "channel": "direct_loan",
+    "support_type": "working_capital",
+    "eligibility_conditions": [
+      "small_business_basic",
+      "business_distress_context"
+    ],
+    "exclusion_conditions": [
+      "excluded_sector",
+      "closed_or_suspended",
+      "tax_delinquency"
+    ],
+    "exception_rules": [
+      "disaster_or_distress_exception_review"
+    ],
+    "required_documents": [
+      "business_registration",
+      "small_business_confirmation",
+      "distress_evidence"
+    ],
+    "application_window": {
+      "type": "announced_period",
+      "source_id": "src_mss_2026_policy_fund_revision"
+    },
+    "loan_limit": {
+      "amount_label": "program_specific_limit",
+      "source_id": "src_semas_fund_overview"
+    },
+    "loan_term": {
+      "term_label": "program_specific_term",
+      "source_id": "src_semas_fund_overview"
+    },
+    "interest_rule": {
+      "rate_label": "program_specific_rate",
+      "source_id": "src_semas_fund_overview"
+    },
+    "source_ids": [
+      "src_semas_fund_overview",
+      "src_mss_2026_policy_fund_revision"
+    ]
+  },
+  {
+    "program_id": "fund_rechallenge_special",
+    "name": "재도전특별자금",
+    "channel": "direct_loan",
+    "support_type": "working_capital",
+    "eligibility_conditions": [
+      "small_business_basic",
+      "rechallenge_context"
+    ],
+    "exclusion_conditions": [
+      "excluded_sector",
+      "closed_or_suspended",
+      "tax_delinquency"
+    ],
+    "exception_rules": [],
+    "required_documents": [
+      "business_registration",
+      "small_business_confirmation",
+      "rechallenge_evidence"
+    ],
+    "application_window": {
+      "type": "announced_period",
+      "source_id": "src_semas_fund_overview"
+    },
+    "loan_limit": {
+      "amount_label": "program_specific_limit",
+      "source_id": "src_semas_fund_overview"
+    },
+    "loan_term": {
+      "term_label": "program_specific_term",
+      "source_id": "src_semas_fund_overview"
+    },
+    "interest_rule": {
+      "rate_label": "program_specific_rate",
+      "source_id": "src_semas_fund_overview"
+    },
+    "source_ids": [
+      "src_semas_fund_overview"
+    ]
+  },
+  {
+    "program_id": "fund_innovation_growth",
+    "name": "혁신성장촉진자금",
+    "channel": "direct_loan",
+    "support_type": "working_or_facility_capital",
+    "eligibility_conditions": [
+      "small_business_basic",
+      "innovation_growth_context"
+    ],
+    "exclusion_conditions": [
+      "excluded_sector",
+      "closed_or_suspended",
+      "tax_delinquency"
+    ],
+    "exception_rules": [],
+    "required_documents": [
+      "business_registration",
+      "small_business_confirmation",
+      "innovation_growth_evidence"
+    ],
+    "application_window": {
+      "type": "announced_period",
+      "source_id": "src_semas_fund_overview"
+    },
+    "loan_limit": {
+      "amount_label": "program_specific_limit",
+      "source_id": "src_semas_fund_overview"
+    },
+    "loan_term": {
+      "term_label": "program_specific_term",
+      "source_id": "src_semas_fund_overview"
+    },
+    "interest_rule": {
+      "rate_label": "program_specific_rate",
+      "source_id": "src_semas_fund_overview"
+    },
+    "source_ids": [
+      "src_semas_fund_overview"
+    ]
+  },
+  {
+    "program_id": "fund_mutual_growth_support",
+    "name": "상생성장지원자금",
+    "channel": "direct_loan",
+    "support_type": "working_capital",
+    "eligibility_conditions": [
+      "small_business_basic",
+      "platform_or_partner_context"
+    ],
+    "exclusion_conditions": [
+      "excluded_sector",
+      "closed_or_suspended",
+      "tax_delinquency"
+    ],
+    "exception_rules": [],
+    "required_documents": [
+      "business_registration",
+      "small_business_confirmation",
+      "platform_or_partner_evidence"
+    ],
+    "application_window": {
+      "type": "announced_period",
+      "source_id": "src_semas_fund_overview"
+    },
+    "loan_limit": {
+      "amount_label": "program_specific_limit",
+      "source_id": "src_semas_fund_overview"
+    },
+    "loan_term": {
+      "term_label": "program_specific_term",
+      "source_id": "src_semas_fund_overview"
+    },
+    "interest_rule": {
+      "rate_label": "program_specific_rate",
+      "source_id": "src_semas_fund_overview"
+    },
+    "source_ids": [
+      "src_semas_fund_overview"
+    ]
+  },
+  {
+    "program_id": "fund_refinancing",
+    "name": "대환대출",
+    "channel": "direct_loan",
+    "support_type": "refinancing",
+    "eligibility_conditions": [
+      "small_business_basic",
+      "high_interest_debt_context"
+    ],
+    "exclusion_conditions": [
+      "excluded_sector",
+      "closed_or_suspended",
+      "tax_delinquency"
+    ],
+    "exception_rules": [],
+    "required_documents": [
+      "business_registration",
+      "small_business_confirmation",
+      "debt_evidence"
+    ],
+    "application_window": {
+      "type": "announced_period",
+      "source_id": "src_semas_fund_overview"
+    },
+    "loan_limit": {
+      "amount_label": "program_specific_limit",
+      "source_id": "src_semas_fund_overview"
+    },
+    "loan_term": {
+      "term_label": "program_specific_term",
+      "source_id": "src_semas_fund_overview"
+    },
+    "interest_rule": {
+      "rate_label": "program_specific_rate",
+      "source_id": "src_semas_fund_overview"
+    },
+    "source_ids": [
+      "src_semas_fund_overview"
+    ]
+  }
+]

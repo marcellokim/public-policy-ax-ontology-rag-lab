@@ -1,0 +1,56 @@
+[
+  {
+    "source_id": "src_mss_2026_integrated_support",
+    "title": "2026년 소상공인 지원사업 통합 공고",
+    "publisher": "중소벤처기업부",
+    "url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?bcIdx=1064370&cbIdx=86",
+    "retrieved_at": "2026-05-26",
+    "content_summary": "2026년 소상공인 지원사업의 통합 공고 맥락과 지원사업 구성을 제공한다.",
+    "claim_boundary": "지원사업 맥락 확인용 공개 공고 요약이며 실제 신청 가능 여부를 확정하지 않는다."
+  },
+  {
+    "source_id": "src_mss_2026_policy_fund_revision",
+    "title": "2026년 소상공인 정책자금 융자계획 변경 공고",
+    "publisher": "중소벤처기업부",
+    "url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?bcIdx=1067383&cbIdx=310&parentSeq=1067383",
+    "retrieved_at": "2026-05-26",
+    "content_summary": "추경 반영 및 정책자금 변경 공고 맥락을 제공한다.",
+    "claim_boundary": "정책자금 유형과 공고 근거 확인용이며 실제 자금 잔여 여부를 보장하지 않는다."
+  },
+  {
+    "source_id": "src_semas_policy_home",
+    "title": "소상공인정책자금 공식 사이트",
+    "publisher": "소상공인시장진흥공단",
+    "url": "https://ols.semas.or.kr/ols/man/SMAN010M/page.do",
+    "retrieved_at": "2026-05-26",
+    "content_summary": "정책자금 신청, 결과조회, 제증명 발급 등 사용자 흐름을 제공한다.",
+    "claim_boundary": "공식 서비스 흐름 확인용이며 이 프로젝트는 실제 신청 자동화를 하지 않는다."
+  },
+  {
+    "source_id": "src_semas_fund_overview",
+    "title": "정책자금 한눈에보기",
+    "publisher": "소상공인시장진흥공단",
+    "url": "https://ols.semas.or.kr/ols/man/SMAN018M/page.do",
+    "retrieved_at": "2026-05-26",
+    "content_summary": "정책자금별 채널, 신청요건, 한도, 기간, 금리 등 요약 정보를 제공한다.",
+    "claim_boundary": "평가 케이스 생성을 위한 공개 요약이며 최신 접수 가능 여부는 공식 사이트 확인이 필요하다."
+  },
+  {
+    "source_id": "src_semas_excluded_sectors",
+    "title": "정책자금 지원 제외업종 안내",
+    "publisher": "소상공인시장진흥공단",
+    "url": "https://ols.semas.or.kr/ols/pfa/SPFA207P/page.do",
+    "retrieved_at": "2026-05-26",
+    "content_summary": "금융업, 보험업, 부동산업, 유흥 또는 사행성 업종 등 제외업종과 예외 취지를 제공한다.",
+    "claim_boundary": "제외조건 모델링용이며 실제 업종코드 판정은 공식 기준 확인이 필요하다."
+  },
+  {
+    "source_id": "src_law_small_business_criteria",
+    "title": "소상공인기본법 및 시행령 소상공인 기준",
+    "publisher": "국가법령정보센터",
+    "url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=164825",
+    "retrieved_at": "2026-05-26",
+    "content_summary": "소기업 중 상시근로자 수 기준 등 소상공인 범위 판단 근거를 제공한다.",
+    "claim_boundary": "법령 기준 요약이며 업종별 세부 판단은 최신 법령과 기관 안내 확인이 필요하다."
+  }
+]

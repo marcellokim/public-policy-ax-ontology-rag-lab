@@ -1,0 +1,223 @@
+{
+  "concepts": [
+    "PolicyFundProgram",
+    "LoanChannel",
+    "ApplicantBusiness",
+    "SmallBusinessCriterion",
+    "EligibilityCondition",
+    "ExclusionCondition",
+    "ExceptionRule",
+    "ApplicationWindow",
+    "LoanTerm",
+    "LoanLimit",
+    "InterestRule",
+    "RequiredDocument",
+    "EvidenceSource",
+    "AnswerRequirement",
+    "SupportType",
+    "BusinessSector",
+    "CreditScoreBand",
+    "TrainingCompletion",
+    "BusinessDistressContext",
+    "YouthEmploymentContext",
+    "ApplicationChannel",
+    "SourceCitation",
+    "MissingInformation",
+    "SafeNextAction",
+    "FailureTag",
+    "RubricAxis",
+    "EvaluationCase",
+    "ResponseCandidate",
+    "PoCReport",
+    "AXServiceDesignNote"
+  ],
+  "relations": [
+    {
+      "relation": "has_channel",
+      "from": "PolicyFundProgram",
+      "to": "LoanChannel",
+      "required": true
+    },
+    {
+      "relation": "requires",
+      "from": "PolicyFundProgram",
+      "to": "EligibilityCondition",
+      "required": true
+    },
+    {
+      "relation": "excludes",
+      "from": "PolicyFundProgram",
+      "to": "ExclusionCondition",
+      "required": true
+    },
+    {
+      "relation": "has_exception",
+      "from": "ExclusionCondition",
+      "to": "ExceptionRule",
+      "required": false
+    },
+    {
+      "relation": "has_application_window",
+      "from": "PolicyFundProgram",
+      "to": "ApplicationWindow",
+      "required": true
+    },
+    {
+      "relation": "has_limit",
+      "from": "PolicyFundProgram",
+      "to": "LoanLimit",
+      "required": true
+    },
+    {
+      "relation": "has_interest_rule",
+      "from": "PolicyFundProgram",
+      "to": "InterestRule",
+      "required": true
+    },
+    {
+      "relation": "requires_document",
+      "from": "PolicyFundProgram",
+      "to": "RequiredDocument",
+      "required": true
+    },
+    {
+      "relation": "satisfies_or_violates",
+      "from": "ApplicantBusiness",
+      "to": "EligibilityCondition",
+      "required": false
+    },
+    {
+      "relation": "supported_by",
+      "from": "EligibilityCondition",
+      "to": "EvidenceSource",
+      "required": true
+    },
+    {
+      "relation": "expects",
+      "from": "EvaluationCase",
+      "to": "AnswerRequirement",
+      "required": true
+    }
+  ],
+  "condition_evidence": {
+    "small_business_basic": [
+      "src_law_small_business_criteria"
+    ],
+    "normal_operation": [
+      "src_semas_fund_overview"
+    ],
+    "credit_vulnerable_band": [
+      "src_semas_fund_overview",
+      "src_mss_2026_policy_fund_revision"
+    ],
+    "credit_management_training": [
+      "src_semas_fund_overview"
+    ],
+    "youth_employment_context": [
+      "src_mss_2026_policy_fund_revision"
+    ],
+    "business_distress_context": [
+      "src_mss_2026_policy_fund_revision"
+    ],
+    "rechallenge_context": [
+      "src_semas_fund_overview"
+    ],
+    "innovation_growth_context": [
+      "src_semas_fund_overview"
+    ],
+    "platform_or_partner_context": [
+      "src_semas_fund_overview"
+    ],
+    "high_interest_debt_context": [
+      "src_semas_fund_overview"
+    ],
+    "excluded_sector": [
+      "src_semas_excluded_sectors"
+    ],
+    "closed_or_suspended": [
+      "src_semas_fund_overview"
+    ],
+    "tax_delinquency": [
+      "src_semas_fund_overview"
+    ],
+    "disaster_or_distress_exception_review": [
+      "src_semas_excluded_sectors",
+      "src_mss_2026_policy_fund_revision"
+    ]
+  },
+  "answer_requirements": [
+    "eligibility_judgment",
+    "eligibility_reason",
+    "exclusion_check",
+    "exception_check",
+    "required_documents",
+    "application_window",
+    "loan_channel",
+    "loan_limit_or_term",
+    "source_citation",
+    "missing_information",
+    "safe_next_action"
+  ],
+  "validation_constraints": {
+    "dataset_boundaries": {
+      "applicant_scenarios": {
+        "data_classification": "synthetic_sample",
+        "is_synthetic": true,
+        "contains_personal_data": false
+      },
+      "response_candidates": {
+        "candidate_type": "sample_response",
+        "contains_personal_data": false
+      }
+    },
+    "allowed_values": {
+      "expected_status": [
+        "pass",
+        "needs_review",
+        "fail"
+      ],
+      "loan_channel": [
+        "direct_loan",
+        "proxy_loan"
+      ],
+      "data_classification": [
+        "synthetic_sample"
+      ],
+      "candidate_type": [
+        "sample_response"
+      ]
+    },
+    "required_fields": {
+      "applicant_scenarios": [
+        "scenario_id",
+        "description",
+        "data_classification",
+        "is_synthetic",
+        "contains_personal_data",
+        "sector",
+        "employee_count",
+        "years_in_operation",
+        "credit_score_band",
+        "completed_trainings",
+        "youth_employment",
+        "business_distress",
+        "excluded_sector_flag",
+        "missing_fields"
+      ],
+      "response_candidates": [
+        "response_id",
+        "scenario_id",
+        "program_id",
+        "text",
+        "candidate_type",
+        "expected_status",
+        "expected_failure_tags"
+      ]
+    },
+    "cross_file_reference_rules": [
+      "response_candidates.program_id must exist in fund_programs.program_id",
+      "response_candidates.scenario_id must exist in applicant_scenarios.scenario_id",
+      "expected_failure_tags values must exist in rubric.md failure tags"
+    ]
+  }
+}
